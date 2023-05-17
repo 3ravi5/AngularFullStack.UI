@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class AddEmployeeComponent {
   constructor(private employeeService: EmployeeService, private router: Router) { }
   employeeRequest: Employee = {
+    id: "00000000-0000-0000-0000-000000000000",
     name: "",
     email: "",
     phone: 0,

@@ -2,6 +2,7 @@
   <table class="table" *ngIf="employees.length > 0">
     <thead>
       <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Email</th>
         <th>Phone</th>
@@ -12,6 +13,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
         <td>{{ employee.name }}</td>
         <td>{{ employee.email }}</td>
         <td>{{ employee.phone }}</td>
