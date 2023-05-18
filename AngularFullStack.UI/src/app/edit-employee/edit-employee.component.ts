@@ -38,6 +38,12 @@ export class EditEmployeeComponent {
 
   updateEmployee() {
     this.employeeService.updateEmployee(this.updateEmployeeRequest.id, this.updateEmployeeRequest).subscribe({
+
+    })
+  }
+
+  deleteRequest(id: string) {
+    this.employeeService.deleteEmployee(id).subscribe({
       next: (response) => {
         this.router.navigate(['employees']);
       }
