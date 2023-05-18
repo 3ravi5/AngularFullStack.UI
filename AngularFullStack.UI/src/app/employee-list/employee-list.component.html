@@ -2,24 +2,26 @@
   <table class="table" *ngIf="employees.length > 0">
     <thead>
       <tr>
-        <th>Id</th>
         <th>Name</th>
         <th>Email</th>
+        <th>Id</th>
         <th>Phone</th>
         <th>Address</th>
         <th>Salary</th>
         <th>Department</th>
+        <th>View/Delete</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let employee of employees">
-        <td>{{ employee.id }}</td>
         <td>{{ employee.name }}</td>
         <td>{{ employee.email }}</td>
+        <td>{{ employee.id }}</td>
         <td>{{ employee.phone }}</td>
         <td>{{ employee.address }}</td>
         <td>{{ employee.salary }}</td>
         <td>{{ employee.department }}</td>
+        <td><a [routerLink]="['/employee', 'edit', employee.id]">View</a></td>
       </tr>
     </tbody>
   </table>

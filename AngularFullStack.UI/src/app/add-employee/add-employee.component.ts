@@ -22,7 +22,7 @@ export class AddEmployeeComponent {
 
   addEmployee() {
     this.employeeService.addEmployee(this.employeeRequest).subscribe({
-      next: (response) => this.router.navigate(['employee-list'])
+      next: (response) => this.router.navigate(['employees'])
     })
   }
 }

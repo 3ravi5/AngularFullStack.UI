@@ -18,4 +18,12 @@ export class EmployeeService {
   addEmployee(employeeData: Employee): Observable<Employee> {
     return this.http.post<Employee>(this.basiApiUrl + '/api/Employees', employeeData);
   }
+
+  getEmployeeById(id: string): Observable<Employee> {
+    return this.http.get<Employee>(this.basiApiUrl + '/api/Employees/' + id);
+  }
+
+  updateEmployee(id: string, updateReqest: Employee): Observable<Employee> {
+    return this.http.put<Employee>(this.basiApiUrl + '/api/employees/' + id, updateReqest);
+  }
 }
